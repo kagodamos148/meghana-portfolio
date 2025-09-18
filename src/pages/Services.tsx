@@ -125,7 +125,7 @@ const Services = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-white text-white hover:bg-white/10 px-8 py-4 rounded-2xl font-semibold transform hover:scale-105 transition-all duration-300"
+                  className="border-white text-white bg-white/10 hover:bg-white/20 px-8 py-4 rounded-2xl font-semibold transform hover:scale-105 transition-all duration-300"
                 >
                   View Portfolio
                 </Button>
