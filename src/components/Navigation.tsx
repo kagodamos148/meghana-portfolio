@@ -35,7 +35,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="text-xl lg:text-2xl font-pecita font-bold text-gradient hover:scale-105 transition-transform duration-300">
-            Meghana Rao
+            Dr. Meghana Rao
           </Link>
 
           {/* Desktop Navigation */}
