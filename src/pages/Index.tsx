@@ -65,9 +65,11 @@ const Index = () => {
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="animate-fade-in">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
               Building Bridges Between{' '}
-              <span className="text-gradient">Science & Humanity</span>
+              <span className="text-gradient inline-block px-6 py-2 mx-6">
+                Science & Humanity
+              </span>
             </h2>
             <p className="text-lg lg:text-xl font-body text-muted-foreground leading-relaxed mb-8">
               I'm Meghana Rao Nadendla (Nadella), bridging clinical expertise with innovation. My work 

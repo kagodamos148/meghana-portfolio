@@ -1,8 +1,8 @@
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import pradallyHero from '@/assets/pridally-hero.jpg';
+import pradallyHero from '@/assets/Pridally_logo.jpg';
 import scensoraHero from '@/assets/scensora-hero.jpg';
-import speak2makeHero from '@/assets/speak2make-hero.jpg';
+import speak2makeHero from '@/assets/speak2megh.jpeg';
 
 const Projects = () => {
   const projects = [
