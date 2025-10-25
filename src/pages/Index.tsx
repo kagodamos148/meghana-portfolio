@@ -19,7 +19,7 @@ const Index = () => {
             </h1>
             <div className="text-lg md:text-xl lg:text-2xl font-body text-muted-foreground mb-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
               <span className="text-primary font-semibold">Clinical Pharmacist</span> • {' '}
-              <span className="text-accent font-semibold">Psychologist</span> • {' '}
+              <span className="text-accent font-semibold">Pyschology trainee</span> • {' '}
               <span className="text-secondary font-semibold">Social Entrepreneur</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center mb-12 animate-slide-up" style={{animationDelay: '0.4s'}}>
@@ -39,10 +39,10 @@ const Index = () => {
             
             {/* Floating elements */}
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-muted-foreground animate-float">
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                 <span>NHS Clinical Entrepreneur</span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
                 <span>BBC Featured</span>
@@ -70,7 +70,7 @@ const Index = () => {
               <span className="text-gradient">Science & Humanity</span>
             </h2>
             <p className="text-lg lg:text-xl font-body text-muted-foreground leading-relaxed mb-8">
-              I'm Meghana Rao Nadendla, bridging clinical expertise with innovation. My work 
+              I'm Meghana Rao Nadendla (Nadella), bridging clinical expertise with innovation. My work 
               spans from LGBTQIA+ digital health solutions to sensory well-being products, 
               always with the goal of creating more inclusive, empowering healthcare systems.
             </p>

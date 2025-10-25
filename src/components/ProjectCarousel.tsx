@@ -10,7 +10,6 @@ const projects = [
     title: "PRIDalLY",
     subtitle: "LGBTQIA+ Health App",
     description: "A new model of inclusive healthcare based on the FiHolistic model covering physical, mental, social, reproductive, and sexual health.",
-    status: "NHS Clinical Entrepreneur Programme",
     color: "from-primary to-accent",
     image: pradallyHero
   },

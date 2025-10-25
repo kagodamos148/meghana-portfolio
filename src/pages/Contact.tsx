@@ -9,19 +9,19 @@ const Contact = () => {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:contact@meghanarao.com',
+      href: 'mailto:speaktomegh@gmail.com',
       color: 'hover:text-primary'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: '#',
+      href: 'https://www.linkedin.com/in/dr-meghana-nadendla-gmbpss-88a346128/',
       color: 'hover:text-blue-600'
     },
     {
       name: 'Instagram',
       icon: Instagram,
-      href: '#',
+      href: 'https://www.instagram.com/speaktomegh/',
       color: 'hover:text-pink-600'
     }
   ];
@@ -102,7 +102,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-heading font-semibold">Location</p>
-                      <p className="text-muted-foreground">United Kingdom</p>
+                      <p className="text-muted-foreground">Cambridge, United Kingdom</p>
                     </div>
                   </div>
                   
@@ -112,7 +112,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-heading font-semibold">Email</p>
-                      <p className="text-muted-foreground">contact@meghanarao.com</p>
+                      <p className="text-muted-foreground">speaktomegh@gmail.com</p>
                     </div>
                   </div>
                 </div>

@@ -83,7 +83,7 @@ const About = () => {
                   <h3 className="text-lg lg:text-xl font-heading font-semibold">Recognitions</h3>
                 </div>
                 <div className="space-y-2 text-sm font-body text-muted-foreground relative z-10">
-                  <p>NHS Clinical Entrepreneur</p>
+                  <p>Santander X 4.0 - Top 16 entrepreneur</p>
                   <p>Tata Scholar</p>
                   <p>BBC-featured speaker</p>
                 </div>
