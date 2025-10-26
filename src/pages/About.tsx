@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const About = () => {
   const [memoryImages, setMemoryImages] = useState<string[]>([]);
+  const [audioFiles, setAudioFiles] = useState<string[]>([]);
 
   useEffect(() => {
     // Function to dynamically import all images from memories_and_moments folder
@@ -23,7 +24,24 @@ const About = () => {
       }
     };
 
+    // Function to dynamically import all audio files from audio folder
+    const importAudioFiles = async () => {
+      try {
+        // Get all audio files from the audio folder
+        const audioModules = import.meta.glob('/src/assets/audio/*.(mp3|m4a|wav|ogg)', {
+          eager: true,
+          as: 'url'
+        });
+        
+        const audioPaths = Object.values(audioModules) as string[];
+        setAudioFiles(audioPaths);
+      } catch (error) {
+        console.error('Error loading audio files:', error);
+      }
+    };
+
     importImages();
+    importAudioFiles();
   }, []);
 
   return (
@@ -100,9 +118,49 @@ const About = () => {
               <h2 className="text-2xl lg:text-3xl font-heading font-semibold text-foreground mb-6 flex items-center gap-3">
                 🔊 Listen to Me
               </h2>
-              <p className="text-base lg:text-lg font-body text-muted-foreground leading-relaxed mb-4">
+              <p className="text-base lg:text-lg font-body text-muted-foreground leading-relaxed mb-6">
                 Listen to my talk at BBC Essex, where I explore resilience, psychology, gender inclusivity, the evolving face of healthcare, and the need for inclusive healthcare.
               </p>
+              
+              {/* Audio Player */}
+              {audioFiles.length > 0 && (
+                <div className="bg-white/50 p-6 rounded-xl border border-purple-200 mb-6">
+                  <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+                    🎵 Featured Audio
+                  </h3>
+                  {audioFiles.map((audioSrc, index) => (
+                    <div key={index} className="mb-4 last:mb-0">
+                      <audio 
+                        controls 
+                        className="w-full mb-2"
+                        preload="metadata"
+                      >
+                        <source src={audioSrc} type="audio/mp4" />
+                        <source src={audioSrc} type="audio/mpeg" />
+                        <p className="text-muted-foreground text-sm">
+                          Your browser doesn't support audio playback. 
+                          <a href={audioSrc} className="text-primary underline" download>
+                            Download the audio file
+                          </a>
+                        </p>
+                      </audio>
+                      <p className="text-sm text-muted-foreground italic">
+                        Listen to insights on healthcare, psychology, and inclusive care practices.
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              {/* Fallback message if no audio files found */}
+              {audioFiles.length === 0 && (
+                <div className="bg-purple-100/50 p-4 rounded-lg border-2 border-dashed border-purple-300 text-center mb-6">
+                  <p className="text-purple-700 font-medium">
+                    🎵 Audio content will appear here when available
+                  </p>
+                </div>
+              )}
+              
               <a href="#" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
                 <Mic className="w-5 h-5" />
                 → BBC Essex Link

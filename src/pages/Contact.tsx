@@ -11,7 +11,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('megh_portfolio_template', 'template_29zgywo', form.current, 'w_-2EGu59oZR0tLM4').then(
+    emailjs.sendForm('megh_portfolio_template', 'template_jwpmue5', form.current, 'w_-2EGu59oZR0tLM4').then(
       () => {
         alert('Message sent successfully!');
         form.current.reset();
