@@ -1,6 +1,7 @@
-import { GraduationCap, Globe, Award, Youtube, Mic, BookOpen, Users, Instagram } from 'lucide-react';
+import { ArrowRight, GraduationCap, Globe, Award, Youtube, Mic, BookOpen, Users, Instagram } from 'lucide-react';
 import { FloatingShapes, GradientBackground, CardDecoration } from '@/components/SVGDecorations';
 import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
 
 const About = () => {
   const [memoryImages, setMemoryImages] = useState<string[]>([]);
@@ -221,11 +222,16 @@ const About = () => {
                   <p className="text-base lg:text-lg font-body text-muted-foreground leading-relaxed mb-4">
                     Let's connect — whether it's for collaboration, conversation, or creating change together.
                   </p>
-                  <a href="/contact" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
-                    → Contact Me
-                  </a>
                 </div>
               </div>
+            </div>
+            <div className="flex justify-center pt-8">
+              <a href="/contact" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors">
+                <Button className="btn-hero-outline">
+                  Contact Me
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>

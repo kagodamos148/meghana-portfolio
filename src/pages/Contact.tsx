@@ -3,8 +3,24 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('megh_portfolio_template', 'template_29zgywo', form.current, 'w_-2EGu59oZR0tLM4').then(
+      () => {
+        alert('Message sent successfully!');
+        form.current.reset();
+      },
+      (error) => {
+        alert('Failed to send the message, please try again later.', error.text);
+      }
+    )
+  }
   const socialLinks = [
     {
       name: 'Email',
@@ -45,12 +61,13 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="floating-card p-8">
               <h2 className="text-3xl font-heading font-bold mb-6">Send a Message</h2>
-              <form className="space-y-6">
+              <form ref={form} className="space-y-6" onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
                     <Input 
                       id="name" 
+                      name="user_name"
                       placeholder="Your full name"
                       className="rounded-xl border-2 focus:border-primary"
                     />
@@ -60,6 +77,7 @@ const Contact = () => {
                     <Input 
                       id="email" 
                       type="email" 
+                      name="user_email"
                       placeholder="your.email@example.com"
                       className="rounded-xl border-2 focus:border-primary"
                     />
@@ -70,6 +88,7 @@ const Contact = () => {
                   <Label htmlFor="subject">Subject</Label>
                   <Input 
                     id="subject" 
+                    name="subject"
                     placeholder="What's this about?"
                     className="rounded-xl border-2 focus:border-primary"
                   />
@@ -79,6 +98,7 @@ const Contact = () => {
                   <Label htmlFor="message">Message</Label>
                   <Textarea 
                     id="message" 
+                    name="message"
                     placeholder="Tell me about your project or how I can help..."
                     className="rounded-xl border-2 focus:border-primary min-h-[150px]"
                   />
